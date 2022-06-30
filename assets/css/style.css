@@ -25,6 +25,12 @@ body {
 .bd-top {
     border-top: 1px solid #cee4f283;
 }
+.tx-shadow {
+    text-shadow: 1px 1px 1px #000;
+}
+:root {
+    --animate-delay: 0.5s;
+  }
 /*----------FUENTES----------*/
 @font-face {
     font-family: "Medieval";
@@ -150,6 +156,69 @@ main section {
     color: #CEE4F2;
     padding: 10px;
 }
+/*----------MEDIA----------*/
+/*---Videos---*/
+.videos {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+}
+.media_titulo {
+    border-bottom: 1px solid #7e2f47;
+    color: #7e2f47;
+    font-family: "Medieval", Arial, Helvetica;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.videos iframe {
+    border: 1px solid #cee4f283;
+    height: 315px;
+    margin: auto;
+    width: 100%; 
+}
+.carousel-item h5 {
+    font-family: "Tiro", Arial, Helvetica;
+    color: #CEE4F2;
+}
+/*----------REQUISITOS---------*/
+main section h4 {
+    color:#7e2f47;
+    font-family: "Medieval", Arial, Helvetica;
+    letter-spacing: 10px;
+    margin-top: 10px;
+}
+.table {    
+    color: #CEE4F2;
+    margin-bottom: 50px;
+}
+.table-hover {
+    color: #CEE4F2;
+}
+.tablas_contenedor {
+    transform: translateY(10%);
+}
+.table tr {
+    border-bottom: 1px solid #cee4f283;
+}
+/*----------CONTACTO---------*/
+.formularios {
+    background-image: url(../img/trono.png);
+    background-size: cover;
+    background-position: center;  
+    border-radius: 10px;
+    border: 1px solid #cee4f283;
+    box-shadow: 5px 5px 5px #7e2f47;
+    padding: 20px;
+}
+form {
+    color: #CEE4F2;
+}
+.tab-content a {
+    color: #7e2f47;
+}
 /*----------FOOTER----------*/
 footer {
     color: #cee4f283;
@@ -162,6 +231,12 @@ footer a:hover {
     color: black;
 }
 /*----------MEDIA QUERIES---------*/
+/*---Tables---*/
+@media (min-width:768px) {
+.videos iframe {
+        height: 460px;
+}   
+}
 /*---Desktop---*/
 @media (min-width:1280px) {
     .menu_bar label {
@@ -195,5 +270,8 @@ footer a:hover {
         row-gap: 10px;
         grid-template-columns: repeat(2, 1fr);        
         padding: 10px;
+    }
+    .videos iframe {
+        height: 780px;
     }      
 }
